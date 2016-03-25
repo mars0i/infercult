@@ -8,7 +8,7 @@ coherence and inference, from section 5 of
 	Marshall Abrams
 	Philosophy of Science 2015 82:5, 983-996 
 
-available at http://www.journals.uchicago.edu/doi/abs/10.1086/683434 ,
+available at http://www.journals.uchicago.edu/doi/abs/10.1086/683434,
 and generalizations of that model, including the extended model in the
 appendix of an earlier, longer draft of the same paper, available at
-http://philsci-archive.pitt.edu/11139/ .
+http://philsci-archive.pitt.edu/11139/.
