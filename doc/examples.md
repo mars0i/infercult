@@ -18,7 +18,7 @@ the example.
 
 ```
 
-`(infercult.models/next-freq-1 p r x)` Calculates next frequency of a
+`(infercult.models/next-freq-1 p r x)` calculates next frequency of a
 cultural variant from previous frequency `x`, using direct
 transmission probability `p` and internal inference probability `r`. 
 From "Coherence, Muller's ratchet, and the maintenance of culture",
@@ -42,7 +42,7 @@ equation (9), p. 993, i.e. (7) after *x* and *y* have become equal.
 (view plt)
 ```
 
-`(infercult.models/next-freq-2 p q r x y)` Calculates next frequency
+`(infercult.models/next-freq-2 p q r x y)` calculates next frequency
 from previous frequencies `x` and `y`, using  transmission probabilities
 `p` and `q`, and inference probability `r`. From appendix of
 prepublication draft of "Coherence, Muller's ratchet,  and the
