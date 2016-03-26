@@ -48,7 +48,7 @@ have above).  These are convenience versions of Incanter's `xy-plot` and
 `add-lines` that automatically add the necessary *x* coordinate
 sequence.
 
-```
+```clojure
 (use '[incanter core])     ; for view
 (use 'infercult.incantfns) ; xyp, add
 (use 'infercult.models)    ; next-freq-2
