@@ -27,6 +27,26 @@ equation (9), p. 993, i.e. (7) after *x* and *y* have become equal.
 
 ## next-freq-2
 
+### All at once:
+
+```clojure
+(use 'incanter.core)        ; for view
+(use 'infercult.incantfns)
+(def plt (freq-pairs-plot 0.7 0.8 0.9 0.3 0.2 0.8 50))
+                         ; p   q   r   s   x   y  n
+(view plt)
+```
+
+Here `p`, `q` are external transitional probabilities for two cultural
+variants (i.e. the probability of learning from an individual who has
+the variant), `r`, `s` are internal inference probabilities (i.e. the
+probability `r` of infering the first variant from the second, and vice
+versa for `s`), `x` and `y` are initial frequencies of the two
+variants, and `n` is the number of iterations to plot.
+
+
+### Piecemeal:
+
 ```clojure
 (use 'incanter.core)       ; for view
 (use 'incanter.charts)     ; for set-y-range
