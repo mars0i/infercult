@@ -8,15 +8,18 @@ internal inference probability r.  From "Coherence, Muller's ratchet,
 and the maintenance of culture", equation (9), p. 993, i.e. (7) after
 x and y have become equal.
 
-	(use '[incanter core charts])
-	(use 'infercult.models) ; next-freq-1
+```clojure
+(use '[incanter core charts])
+(use 'infercult.models) ; next-freq-1
 
-	(def p (xy-plot (range) 
-	                (take 50 (iterate (partial next-freq-1 0.9 0.1)
-	                         0.1)))) ; initial freq
-	(view p)
-	(add-lines p (range)
-	             (take 50 (iterate (partial next-freq-1 0.7 0.9) 0.5)))
+(def p (xy-plot (range) 
+                (take 50 (iterate (partial next-freq-1 0.9 0.1)
+                         0.1)))) ; initial freq
+(view p)
+(add-lines p (range)
+             (take 50 (iterate (partial next-freq-1 0.7 0.9) 0.5)))
+
+```
 
 ## next-freq-2
 
