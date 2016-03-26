@@ -48,15 +48,17 @@ have above).  These are convenience versions of Incanter's `xy-plot` and
 `add-lines` that automatically add the necessary *x* coordinate
 sequence.
 
-	(use '[incanter core])     ; for view
-	(use 'infercult.incantfns) ; xyp, add
-	(use 'infercult.models)    ; next-freq-2
+```
+(use '[incanter core])     ; for view
+(use 'infercult.incantfns) ; xyp, add
+(use 'infercult.models)    ; next-freq-2
 
-	(def f (swapped-fns (partial next-freq-2 0.7 0.9 0.8)
-	                    (partial next-freq-2 0.8 0.3 0.5)))
+(def f (swapped-fns (partial next-freq-2 0.7 0.9 0.8)
+                    (partial next-freq-2 0.8 0.3 0.5)))
 
-	(def xys (iterate f [0.2 0.8])) ; could insert swapped-fns call for f
+(def xys (iterate f [0.2 0.8])) ; could insert swapped-fns call for f
 
-	(def p (xyp (take 60 (map first  xys))))
-	(add p      (take 60 (map second xys)))
-	(view p)
+(def p (xyp (take 60 (map first  xys))))
+(add p      (take 60 (map second xys)))
+(view p)
+```
