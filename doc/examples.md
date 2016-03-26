@@ -28,17 +28,23 @@ equation (9), p. 993, i.e. (7) after *x* and *y* have become equal.
 ## next-freq-2
 
 ```clojure
-(use '[incanter core])     ; for view
+(use 'incanter.core)       ; for view
+(use 'incanter.charts)     ; for set-y-range
 (use 'infercult.incantfns) ; xyp, add
 (use 'infercult.models)    ; next-freq-2
-
-(def f (swapped-fns (partial next-freq-2 0.7 0.9 0.8)
-                    (partial next-freq-2 0.8 0.3 0.5)))
+ 
+                                       ;  p   q   r
+(def f (swapped-fns (partial next-freq-2 0.7 0.8 0.9)
+                    (partial next-freq-2 0.8 0.7 0.3)))
+                                       ;  q   p   s
+;; Note that the first two parameters are supposed to be the same
+;; numbers but in swapped order.
 
 (def xys (iterate f [0.2 0.8])) ; could insert swapped-fns call for f
 
-(def plt (xyp (take 60 (map first  xys))))
-(add plt      (take 60 (map second xys)))
+(def plt (xyp (take 50 (map first  xys))))
+(add plt      (take 50 (map second xys)))
+(set-y-range plt 0.0 1.0)
 (view plt)
 ```
 
