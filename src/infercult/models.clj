@@ -44,3 +44,16 @@
   [f g]
   (fn [[x y]]
     [(f x y) (g y x)]))
+
+(defn freq-pairs
+  "Given two transmission probabilities p and q, and inference probabilities
+  r and s, and initial frequencies x and y of two cultural variants, returns 
+  a lazy sequence of pairs that are the successive x freqs and y freqs 
+  calculated using next-freq-2, i.e. according to equations (13) and (14) 
+  in the appendix of prepublication draft of \"Coherence, Muller's ratchet, 
+  and the maintenance of culture\", equation (13), p. 14."
+  [p q r s x y]
+  (let [f (swapped-fns (partial next-freq-2 p q r)
+                       (partial next-freq-2 q p s))]
+    (iterate f [x y])))
+
