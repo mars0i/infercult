@@ -19,3 +19,12 @@ file LICENSE, except where noted.
 
 See doc/examples.md for examples illustrating how to use the functions 
 in src/infercult/models.clj.
+
+## License
+
+This software is copyright 2016 by [Marshall
+Abrams](http://members.logical.net/~marshall/), and is distributed
+under the [Gnu General Public License version
+3.0](http://www.gnu.org/copyleft/gpl.html) as specified in the file
+LICENSE, except where noted.
+
